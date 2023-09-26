@@ -1,19 +1,25 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Even or Odd</title>
+    <title>Positive or Negative</title>
   </head>
   <body>
     <script>
-      const a = parseFloat(prompt("Enter the number:"));
-      function findposorneg(){
-        if(a%2===0){
-        window.alert(a+' is even.');
-        }
-        else{
-          window.alert(a+' is odd.');
+      function findPositiveOrNegative() {
+        const inputNumber = parseFloat(prompt("Enter a number:"));
+
+        if (isNaN(inputNumber)) {
+          window.alert("Please enter a valid number.");
+        } else if (inputNumber === 0) {
+          window.alert("The number is zero.");
+        } else if (inputNumber > 0) {
+          window.alert(inputNumber + ' is positive.');
+        } else {
+          window.alert(inputNumber + ' is negative.');
         }
       }
-      window.onload=findposorneg;
+
+      window.onload = findPositiveOrNegative;
     </script>
   </body>
 </html>
